@@ -1,0 +1,14 @@
+<dx-sortable
+  filter=".dx-accordion-item"
+  handle=".dx-accordion-item-title"
+  (onReorder)="onReorder($event)"
+>
+  <dx-accordion [dataSource]="companies">
+    <div *dxTemplate="let company of 'title'">
+      <div>{{ company.CompanyName }}</div>
+    </div>
+    <div *dxTemplate="let company of 'item'">
+      <div>{{ company.Address }}</div>
+    </div>
+  </dx-accordion>
+</dx-sortable>
